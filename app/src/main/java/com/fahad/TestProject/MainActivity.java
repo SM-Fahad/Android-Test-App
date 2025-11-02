@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         etUserName = findViewById(R.id.etUserName);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        btnRegister = findViewById(R.id.btnRegister);
         fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(v -> {
@@ -90,11 +91,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//    btnRegister.setOnClickListener(v -> {
-//        Toast.makeText(MainActivity.this, "Redirecting to Register Page",Toast.LENGTH_SHORT).show();
-//        Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
-//        startActivity(intent);
-//    });
+    btnRegister.setOnClickListener(v -> {
+        Toast.makeText(MainActivity.this, "Redirecting to Register Page",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+        startActivity(intent);
+    });
 
 
 
