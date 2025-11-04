@@ -17,6 +17,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.fahad.TestProject.UI.ProductAdd;
+import com.fahad.TestProject.UI.ProductList;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etUserName, etPassword;
 
-    Button btnLogin, btnRegister;
+    Button btnLogin, btnRegister, btnProductAdd, btnProductList;
 
     FloatingActionButton fab;
 
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         btnRegister = findViewById(R.id.btnRegister);
+        btnProductAdd = findViewById(R.id.btnProductAdd);
+        btnProductList = findViewById(R.id.btnProductList);
         fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(v -> {
@@ -94,6 +98,18 @@ public class MainActivity extends AppCompatActivity {
     btnRegister.setOnClickListener(v -> {
         Toast.makeText(MainActivity.this, "Redirecting to Register Page",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+        startActivity(intent);
+    });
+
+    btnProductAdd.setOnClickListener(v -> {
+        Toast.makeText(MainActivity.this, "Redirecting to Product Add Page",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, ProductAdd.class);
+        startActivity(intent);
+    });
+
+        btnProductList.setOnClickListener(v -> {
+        Toast.makeText(MainActivity.this, "Redirecting to Product List Page",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, ProductList.class);
         startActivity(intent);
     });
 
